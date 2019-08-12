@@ -2,5 +2,8 @@ package entity.enums;
 
 public enum TourType {
 
-    SHOPPING1
+    SHOPPING ,
+    REST ,
+    EXCURSION
+
 }

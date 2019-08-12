@@ -1,17 +1,26 @@
 package entity;
 
-import entity.enums.FoodType;
-import entity.enums.HotelType;
-import entity.enums.TourType;
-import entity.enums.TransportType;
+import entity.enums.*;
 
 public class RestTour extends Tour {
 
+    public HotelType getHotelType() {
+        return hotelType;
+    }
+
+    public void setHotelType(HotelType hotelType) {
+        this.hotelType = hotelType;
+    }
+
     private HotelType hotelType;
 
-    public RestTour(TourType tour, int dayNumber, int cost, TransportType transport, FoodType food, String city, HotelType hotelType) {
+    public RestTour() {
 
-        super(tour, dayNumber, cost, transport, food, city);
+    }
+
+    public RestTour(TourType tour, Integer dayNumber, TransportType transport, FoodType food, CityType city, HotelType hotelType) {
+
+        super(tour, dayNumber, transport, food, city);
         this.hotelType = hotelType;
 
     }
