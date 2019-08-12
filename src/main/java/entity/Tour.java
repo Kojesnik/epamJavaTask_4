@@ -1,9 +1,18 @@
 package entity;
 
-import entity.enums.CityType;
-import entity.enums.FoodType;
-import entity.enums.TourType;
-import entity.enums.TransportType;
+import enums.CityType;
+import enums.FoodType;
+import enums.TourType;
+import enums.TransportType;
+
+/**
+ *
+ * @author Misha Kolesnik
+ * @date 12.08.2019
+ *
+ * Abstract Class provides entity of all tours
+ *
+ */
 
 public abstract class Tour {
 

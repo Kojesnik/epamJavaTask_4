@@ -1,6 +1,15 @@
 package entity;
 
-import entity.enums.*;
+import enums.*;
+
+/**
+ *
+ * @author Misha Kolesnik
+ * @date 12.08.2019
+ *
+ * Class provides entity of shopping tour
+ *
+ */
 
 public class ShoppingTour extends Tour {
 
@@ -37,7 +46,7 @@ public class ShoppingTour extends Tour {
         if ((getTour() == shoppingTour.getTour()) && (getDayNumber() == shoppingTour.getDayNumber()) &&
                 (getTransport() == shoppingTour.getTransport()) &&
                 (getFood() == shoppingTour.getFood()) && (getCity() == shoppingTour.getCity()) &&
-                (getShopType() == shoppingTour.getShopType())) {
+                (getShopType() == shoppingTour.shopType)) {
             return true;
         } else {
             return false;
@@ -46,11 +55,12 @@ public class ShoppingTour extends Tour {
 
     @Override
     public int hashCode() {
-        return 1;
+        return getDayNumber() * 10;
     }
 
     @Override
     public String toString() {
-        return "ShoppingTour [ShopType";
+        return "ShoppingTour [ShopType " + shopType + ", TourType " + getTour() + ", DayNumber " + getDayNumber() + ", TransportType "
+                + getTransport() + ", FoodType " + getFood() + ", City " + getCity() + " ]";
     }
 }
