@@ -3,6 +3,7 @@ package logic;
 import entity.ShoppingTour;
 import entity.Tour;
 import enums.*;
+import exceptions.BadInputException;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,12 +11,16 @@ import static org.junit.Assert.*;
 public class FileReaderTest {
 
     @Test
-    public void readTourFile() {
+    public void readTourFile() throws BadInputException {
 
         Tour exp = new ShoppingTour(TourType.SHOPPING, 10, TransportType.BUS, FoodType.RO, CityType.MOSCOW, ShopType.FOOD);
-        FileReader.readTourFile();
-        Tour act = FileReader.tours.get(0);
-        assertEquals(exp, act);
+        try {
+            FileReader.readTourFile();
+            Tour act = FileReader.tours.get(0);
+            assertEquals(exp, act);
+        } catch (BadInputException e) {
+
+        }
 
     }
 

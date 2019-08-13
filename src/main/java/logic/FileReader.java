@@ -5,6 +5,7 @@ import entity.RestTour;
 import entity.ShoppingTour;
 import entity.Tour;
 import enums.*;
+import exceptions.BadInputException;
 import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
@@ -38,7 +39,7 @@ public class FileReader {
      * Create obj and put them into arraylist
      *
      */
-    public static void readTourFile() {
+    public static void readTourFile() throws BadInputException {
 
         try {
             FileInputStream in = new FileInputStream("/Users/kojes/Desktop/tours.txt");
@@ -117,12 +118,15 @@ public class FileReader {
                         isAddble = false;
                         logger.warn("Bad CityType info");
                     }
-                    if (isAddble) {
-                        tours.add(tourToAdd);
-                        logger.info("Tour created and added successfully");
-                    }
                 } else {
+                    isAddble = false;
                     logger.warn("Bad TourType info");
+                }
+                if (isAddble) {
+                    tours.add(tourToAdd);
+                    logger.info("Tour created and added successfully");
+                } else {
+                    throw new BadInputException("Bad input");
                 }
 
             }
