@@ -12,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 /**
  *
@@ -25,7 +26,6 @@ import java.util.ArrayList;
 public class FileReader {
 
     private static final Logger logger = Logger.getLogger(FileReader.class);
-
 
     public static ArrayList<Tour> tours = new ArrayList<Tour>();
     public static Tour params;
