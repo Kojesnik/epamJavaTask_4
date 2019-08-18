@@ -28,6 +28,7 @@ public class Finder {
 
         int count;
         ArrayList<Tour> tours = new ArrayList<Tour>();
+        Sort.sortByTour();
         for (Tour tour: FileReader.tours) {
             count = 0;
             if (tour.getTour() == FileReader.params.getTour()) {
