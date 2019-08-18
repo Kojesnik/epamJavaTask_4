@@ -7,7 +7,7 @@ import java.util.Comparator;
 /**
  *
  * @author Misha Kolesnik
- * @date 12.08.2019
+ * @date 18.08.2019
  *
  * Class that provides compare methods
  *
