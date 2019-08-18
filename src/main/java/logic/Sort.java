@@ -3,6 +3,15 @@ package logic;
 import java.util.Arrays;
 import java.util.Collections;
 
+
+/**
+ *
+ * @author Misha Kolesnik
+ * @date 18.08.2019
+ *
+ * Class that provides methods to sort TOUR ARRAY by different params
+ *
+ */
 public class Sort {
 
     public static void sortByTour() {

@@ -4,6 +4,14 @@ import entity.Tour;
 
 import java.util.Comparator;
 
+/**
+ *
+ * @author Misha Kolesnik
+ * @date 12.08.2019
+ *
+ * Class that provides compare methods for different params
+ *
+ */
 public class Comparators {
 
     public static Comparator<Tour> TourTypeComp = new Comparator<Tour>() {
